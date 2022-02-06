@@ -12,7 +12,7 @@ $id = $_SESSION['userid'];
 
     mysqli_query($db,$sql); 
     $_SESSION['message'] = "BookSaved saved"; 
-    header('location: viewRequest.php');
+    header('location: ../User.php');
 
 }else{
 	if($db->query($sql)==TRUE){}

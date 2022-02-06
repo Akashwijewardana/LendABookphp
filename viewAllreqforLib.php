@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>View Books</title>
+    <title>View Request</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -27,14 +27,15 @@
 
 <body id="page-top">
     <?php 
+
  session_start();
 
+
+
+
  $db = mysqli_connect('localhost', 'root', '', 'lendabook');
- $results = mysqli_query($db, "SELECT * FROM book"); 
+ $results = mysqli_query($db, "SELECT * FROM `requests`"); ?>
 
-
-
- ?>
 
 
     <!-- Page Wrapper -->
@@ -54,39 +55,87 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-              <li class="nav-item">
-                <a class="nav-link" href="User.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="viewBook.php">
+                <a class="nav-link" href="LibViewBokBorrowings.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Books</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewVideos.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Videos</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideos.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Video</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteBook.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Books</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="AddRequest.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Add Request</span></a>
+                    <span>View Book Borrowings</span></a>
             </li>
 
+           <li class="nav-item">
+                <a class="nav-link" href="AddBookBorrowing.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Borrow Books</span></a>
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="BookRegistration.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Add Books</span></a>
+            </li>
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewBookReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Reservations</span></a>
+            
+</li>
+
+               <li class="nav-item">
+                <a class="nav-link" href="viewBkComments.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Comments</span></a>
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="AddVideoBorrowing.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Borrow Videos</span></a>
+            </li>
+            </li> 
+
+               <li class="nav-item">
+                <a class="nav-link" href="AddVideo.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Add Videos</span></a>
+            </li>
+
+
+                   <li class="nav-item">
+                <a class="nav-link" href="LibViewVidBorrowings.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Borrowings</span></a>
+            </li>
+
+               <li class="nav-item">
+                <a class="nav-link" href="LibViewComments.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Comments</span></a>
+            </li>
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="viewAllreqforLib.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Request</span></a>
+            </li>
+
+
+ </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewVideoReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Reservations</span></a>
+            </li> 
+
+
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewUsers.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Members</span></a>
+            </li>
+          
 
             </li>
                <li class="nav-item">
@@ -94,7 +143,6 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Edite Profile</span></a>
             </li>
-          
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -304,7 +352,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../php/logout.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -320,13 +368,43 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Client Dashboard</h1>
+                    <h1 class="h3 mb-2 text-gray-800">View Request</h1>
            
 
-<img src="img/m_banner1.jpg"  style="height: 650px;">
-
                     <!-- DataTales Example -->
-                    
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">View Requests</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                      <thead>
+                                        <tr>
+                                          <th>Id</th>
+                                          <th>Type</th>
+                                          <th>Description</th>
+               
+                                          <th>user Id</th>
+                                          <th>Request Time</th>
+                                         
+                                        </tr>
+                                    </thead>
+                                 
+                                    <tbody>
+                                       <?php while ($row = mysqli_fetch_array($results)) { ?>
+            <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['type']; ?></td>
+            <td><?php echo $row['description']; ?></td>
+            <td><?php echo $row['user_id']; ?></td>
+            <td><?php echo $row['date']; ?></td>
+           
+            </tr>
+        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
@@ -340,7 +418,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Lend A Book</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
@@ -371,7 +449,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="php/logout.php">Logout</a>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
         </div>

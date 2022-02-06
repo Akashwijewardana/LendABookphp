@@ -22,15 +22,7 @@ body {
 
 session_start();
 $id=$_GET['id'];
-
-
-//  $db = mysqli_connect('localhost', 'root', '', 'lendabook');
-
-// $uid = $_POST['user_id']
-//  $results = mysqli_query($db, "SELECT package_id FROM users WHERE id = $uid;"); 
-
  ?>
-
 
 
 <div class="contact py-sm-5" style="opacity: 0.8;">
@@ -40,34 +32,18 @@ $id=$_GET['id'];
   <div class="container py-xl-4 py-lg-2">
   
   
-<form  method="post" action="php/bkborrow.php?id=<?php echo($id) ?>" class="well form-horizontal" >
+<form  method="post" action="php/vidcomment.php?id=<?php echo($id) ?>" class="well form-horizontal" >
 
-<h1 class="text-center" >Add Borrowing</h1><br><br>
+<h1 class="text-center" >Add Comment</h1><br><br>
 <div class="form-group">
-  <label class="col-md-4 control-label">User Id</label>  
+  <label class="col-md-4 control-label">Comment</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
  
- <input type="text" name="user_id"> </input>
+ <textarea name="comment" placeholder="comment" cols="40" rows="5"></textarea>
     </div>
   </div>
-</div>
-
-
-
-
-
-<div class="form-group">
-    <label class="col-md-4 control-label">Return Date</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="bi bi-book"></i></span>
- 
- <input type="datetime-local" name="returndate"> </input>
-    </div>
-  </div>
-</div>
 </div>
 
 

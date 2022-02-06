@@ -55,6 +55,14 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
+           
+              <li class="nav-item">
+                <a class="nav-link" href="User.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="viewBook.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -66,7 +74,7 @@
                     <span>View Videos</span></a>
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideo.php">
+                <a class="nav-link" href="viewFavoriteVideos.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Favorite Video</span></a>
             </li>
@@ -88,6 +96,7 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Edite Profile</span></a>
             </li>
+          
           
 
             <!-- Sidebar Toggler (Sidebar) -->
@@ -345,7 +354,7 @@
                                     <tbody>
                                        <?php while ($row = mysqli_fetch_array($results)) { ?>
             <tr>
-            <td><?php echo $row['id']; ?></td>
+            <td><strong class='bk-id'><?php echo $row['id']; ?></strong></td>
             <td><?php echo $row['name']; ?></td>
             <td><?php echo $row['desc']; ?></td>
             <td><?php echo $row['isbn']; ?></td>
@@ -353,32 +362,13 @@
             <td><?php echo $row['copies']; ?></td>
 
            <td> 
-   <!--   <form method="post" action="bookReserve.php?id='<?php.$row['id'].?>'">
-        <button type="submit" > Reserve </button>
-
-     </form> -->
-
-
-     <script type="text/javascript">
-
-       function getConfirmation3() {
-
-   
-
-    
-
-  document.location.href = "bookReserve.php?id=<?php echo $row["id"]; ?>";
 
 
 
-                                                    }
-
-
-                                            </script>
 
 
 
-<a href="#" onClick="getConfirmation3()">Reserve</a>
+<a href="bookReserve.php?id=<?php echo $row["id"]; ?>"> Reserve </a>
 
 
 
@@ -386,28 +376,19 @@
 
             </td>
             <td>
-                <script type="text/javascript">
- function addfavorites() {
+      
 
-  document.location.href = "php/bookFav.php?id=<?php echo $row["id"]; ?>";
-                                                    }
-</script>
 
-<a href="#" onClick="addfavorites()">Favorite</a>
+<a href="php/bookFav.php?id=<?php echo $row["id"]; ?>">Favorite</a>
 
 
             </td>
 
 
             <td>
-                <script type="text/javascript">
- function addComments() {
+                
 
-  document.location.href = "AddComment.php?id=<?php echo $row["id"]; ?>";
-                                                    }
-</script>
-
-<a href="#" onClick="addComments()">Comments</a>
+<a href="AddComment.php?id=<?php echo $row["id"]; ?>">Comment</a>
 
 
             </td>
@@ -415,14 +396,9 @@
             <td>
 
 
-                          <script type="text/javascript">
- function viewComments() {
 
-  document.location.href = "viewComments.php?id=<?php echo $row["id"]; ?>";
-                                                    }
-</script>
 
-<a href="#" onClick="viewComments()">ViewComments</a>
+<a href="viewComments.php?id=<?php echo $row["id"]; ?>">View Comment</a>
 
 
             </td>
@@ -431,7 +407,6 @@
 
        
 
-            </tr>
         <?php } ?>
                                     </tbody>
                                 </table>

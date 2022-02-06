@@ -54,8 +54,13 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
+                <a class="nav-link" href="LibViewBokBorrowings.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Borrowings</span></a>
+            </li>
+
+           <li class="nav-item">
                 <a class="nav-link" href="AddBookBorrowing.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Borrow Books</span></a>
@@ -65,42 +70,66 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Add Books</span></a>
             </li>
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewBookReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Reservations</span></a>
+            
+</li>
+
                <li class="nav-item">
                 <a class="nav-link" href="viewBkComments.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Book Comments</span></a>
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteBook.php">
+                <a class="nav-link" href="AddVideoBorrowing.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Borrow Videos</span></a>
             </li>
+            </li> 
+
                <li class="nav-item">
-                <a class="nav-link" href="AddRequest.php">
+                <a class="nav-link" href="AddVideo.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Add Videos</span></a>
             </li>
 
-</li>
+
+                   <li class="nav-item">
+                <a class="nav-link" href="LibViewVidBorrowings.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Borrowings</span></a>
+            </li>
+
                <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideo.php">
+                <a class="nav-link" href="LibViewComments.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Video Comments</span></a>
             </li>
 
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="updateProfile.php">
+                <a class="nav-link" href="viewAllreqforLib.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Request</span></a>
             </li>
 
 
+ </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewVideoReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Reservations</span></a>
+            </li> 
+
 
 
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="updateProfile.php">
+                <a class="nav-link" href="ViewUsers.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Members</span></a>
             </li>
@@ -323,7 +352,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="php/logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -390,7 +419,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="php/logout.php">Logout</a>
                 </div>
             </div>
         </div>

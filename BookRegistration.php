@@ -34,7 +34,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input name="name" value="" placeholder="name"  class="form-control"  type="text">
+ <input name="name" value="" placeholder="name"  class="form-control"  type="text" required>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input  name="desc" value=""  placeholder="desc"  class="form-control"  type="text">
+ <input  name="desc" value=""  placeholder="desc"  class="form-control"  type="text" required>
     </div>
   </div>
 </div>
@@ -54,7 +54,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input  name="isbn" value="" " placeholder="name"  class="form-control"  type="text">
+ <input  name="isbn" value="" " placeholder="name"  class="form-control"  type="text" required>
     </div>
   </div>
 </div>
@@ -64,7 +64,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input  name="copies" value="" " placeholder="name"  class="form-control"  type="text">
+ <input  name="copies" value="" " placeholder="name"  class="form-control"  type="text" required>
     </div>
   </div>
 </div>
@@ -74,7 +74,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input  name="author" value="" " placeholder="name"  class="form-control"  type="text">
+ <input  name="author" value="" " placeholder="name"  class="form-control"  type="text" required>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 
  <?php  
-      //export.php  
+      
  if(isset($_POST["export"]))  
  {  
       $connect = mysqli_connect("localhost", "root", "", "lendabook");  

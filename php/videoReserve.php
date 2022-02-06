@@ -4,7 +4,7 @@ session_start();
 
 $id = $_SESSION['userid'];
 /*$id = 1;*/
-$book_id = $_GET['id'];
+$vid= $_GET['id'];
 
 /*$book_id =1;*/
 /*echo $book_id;*/
@@ -12,26 +12,20 @@ $book_id = $_GET['id'];
 
 /*require_once("../php/dbcon.php");*/
 
-if (isset($_POST['save'])) {
 
-	$comment = $_POST['comment'];
 
-$sql = "INSERT INTO `book_comments` ( `book_id`, `comment`, `user_id`) VALUES ('$book_id', '$comment', '$id')";
+$sql = "INSERT INTO `video_borrowing` (`video_id`, `user_id`) VALUES ('$vid','$id')";
 
-}
+
 
 if($db->query($sql)===TRUE){
-echo "Sucsessfully Add to The Favorite";
-header('location: ../User.php');
+echo "Sucsessfully Reserved";
 
 }
 else{
 
 echo "Error:".$sql."<br>".$db->error;
 }
-
-
-
 
 
  ?>

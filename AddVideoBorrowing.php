@@ -59,28 +59,87 @@
                 <a class="nav-link" href="viewBook.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Books</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewVideos.php">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="LibViewBokBorrowings.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Videos</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideo.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Video</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteBook.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Books</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="AddRequest.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Add Request</span></a>
+                    <span>View Book Borrowings</span></a>
             </li>
 
+           <li class="nav-item">
+                <a class="nav-link" href="AddBookBorrowing.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Borrow Books</span></a>
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="BookRegistration.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Add Books</span></a>
+            </li>
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewBookReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Reservations</span></a>
+            
+</li>
+
+               <li class="nav-item">
+                <a class="nav-link" href="viewBkComments.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Comments</span></a>
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="AddVideoBorrowing.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Borrow Videos</span></a>
+            </li>
+            </li> 
+
+               <li class="nav-item">
+                <a class="nav-link" href="AddVideo.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Add Videos</span></a>
+            </li>
+
+
+                   <li class="nav-item">
+                <a class="nav-link" href="LibViewVidBorrowings.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Borrowings</span></a>
+            </li>
+
+               <li class="nav-item">
+                <a class="nav-link" href="LibViewComments.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Comments</span></a>
+            </li>
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="updateProfile.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Request</span></a>
+            </li>
+
+
+ </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewVideoReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Reservations</span></a>
+            </li> 
+
+
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewUsers.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Members</span></a>
+            </li>
+          
 
             </li>
                <li class="nav-item">
@@ -88,7 +147,6 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Edite Profile</span></a>
             </li>
-          
 
           
 
@@ -316,7 +374,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">View Videos</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Add Video Borrowing</h1>
            
 
                     <!-- DataTales Example -->
@@ -336,10 +394,8 @@
                                         
                                         <th>Author</th>
                                         <th>Copies</th>
-                                        <th>Reserve</th>
-                                        <th>Add to Favoorite</th>
-                                        <th>Add Comment</th>
-                                        <th>View Comments</th>
+                                        <th>Borrow</th>
+                                        
 
                                         </tr>
                                     </thead>
@@ -361,26 +417,10 @@
      </form> -->
 
 
-     <script type="text/javascript">
-
-       function getConfirmation3() {
-
-   
-
-    
-
-  document.location.href = "viewvidborrow.php?id=<?php echo $row["id"]; ?>";
 
 
 
-                                                    }
-
-
-                                            </script>
-
-
-
-<a href="#" onClick="getConfirmation3()">Reserve</a>
+<a href="viewvidborrow.php?id=<?php echo $row["id"]; ?>" >Reserve</a>
 
 
 

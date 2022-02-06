@@ -34,7 +34,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input name="username" value="" placeholder="email"  class="form-control"  type="text">
+ <input name="username" value="" placeholder="email"  class="form-control"  type="text" required>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input  name="age" value=""  placeholder="age"  class="form-control"  type="text">
+ <input  name="age" value=""  placeholder="age"  class="form-control"  type="text"  required>
     </div>
   </div>
 </div>
@@ -71,7 +71,7 @@ body {
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- <input  name="password" value="" " placeholder="name"  class="form-control"  type="text">
+ <input  name="password" value=""  placeholder="name"  class="form-control"  type="Password" required>
     </div>
   </div>
 </div>

@@ -18,13 +18,24 @@ if (isset($_POST['save'])) {
 	$user_id = $_POST['user_id'];
 	$returndate =$_POST['returndate'];
 
-$sql = "INSERT INTO `broowvideo` ( `returndate`, `uid`, `vid`) VALUES ('$returndate', '$user_id', '$book_id');";
+	$sql_tableone = "UPDATE `video` SET `copies` = `copies`-1 WHERE id='$book_id'";
+
+	$sql_tabletwo = "INSERT INTO `broowvideo` ( `returndate`, `uid`, `vid`,`status`) VALUES ('$returndate', '$user_id', '$book_id','Pending');";
+
+
+
+	  $sql= $sql_tableone.";".$sql_tabletwo;
+		  
+		  $result = mysqli_multi_query( $db,$sql);
+
 
 }
 
 
-if($db->query($sql)===TRUE){
-echo "Sucsessfully Add to Book Borrowing ";
+if($result ===TRUE){
+
+header('location: ../LibViewVidBorrowings.php');
+
 
 }
 else{

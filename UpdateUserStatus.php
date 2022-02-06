@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="en">
 <head>
-  <title>Add Comment</title>
+  <title>Request Book</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -16,23 +16,17 @@ body {
 }
 </style>
 <body >
+
+
 <br><br>
+
+
 
 <?php 
 
 session_start();
 $id=$_GET['id'];
-
-
-//  $db = mysqli_connect('localhost', 'root', '', 'lendabook');
-
-// $uid = $_POST['user_id']
-//  $results = mysqli_query($db, "SELECT package_id FROM users WHERE id = $uid;"); 
-
  ?>
-
-
-
 <div class="contact py-sm-5" style="opacity: 0.8;">
 
 
@@ -40,35 +34,34 @@ $id=$_GET['id'];
   <div class="container py-xl-4 py-lg-2">
   
   
-<form  method="post" action="php/bkborrow.php?id=<?php echo($id) ?>" class="well form-horizontal" >
+<form  method="post" action="php/updatestatus.php" class="well form-horizontal" >
 
-<h1 class="text-center" >Add Borrowing</h1><br><br>
+<h1 class="text-center" >Update Status</h1><br><br>
 <div class="form-group">
-  <label class="col-md-4 control-label">User Id</label>  
+  <label class="col-md-4 control-label">ID</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
- 
- <input type="text" name="user_id"> </input>
+<input disabled type="text" value="<?php echo($id) ?>" name="user" class="form-control"></input>
     </div>
   </div>
 </div>
 
-
-
-
-
 <div class="form-group">
-    <label class="col-md-4 control-label">Return Date</label>  
+  <label class="col-md-4 control-label">Status</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
-  <span class="input-group-addon"><i class="bi bi-book"></i></span>
- 
- <input type="datetime-local" name="returndate"> </input>
+  <select name="status" id="status">
+  <option value="">--- Choose a Status ---</option>
+  <option value="1">Active</option>
+  <option value="2" >Blacklist</option>
+  
+</select>
+
     </div>
   </div>
 </div>
-</div>
+
 
 
 

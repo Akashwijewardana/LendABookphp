@@ -55,45 +55,25 @@
             <hr class="sidebar-divider my-0">
 
               <li class="nav-item">
-                <a class="nav-link" href="User.php">
+                <a class="nav-link" href="Admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span> Admin Dashboard</span></a>
             </li>
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="viewBook.php">
+                <a class="nav-link" href="registerLibrarian.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Books</span></a>
+                    <span>Register Librarian</span></a>
             </li>
                <li class="nav-item">
                 <a class="nav-link" href="viewVideos.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Videos</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideos.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Video</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteBook.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Books</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="AddRequest.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Add Request</span></a>
-            </li>
-
-
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="updateProfile.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Edite Profile</span></a>
-            </li>
+                    <span>View Librarian</span></a>
+                </li>
+                 </li>
+              
+            
           
 
             <!-- Sidebar Toggler (Sidebar) -->
@@ -304,7 +284,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../php/logout.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -320,7 +300,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Client Dashboard</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Admin Dashboard</h1>
            
 
 <img src="img/m_banner1.jpg"  style="height: 650px;">

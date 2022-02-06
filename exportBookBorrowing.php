@@ -56,40 +56,24 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
+                <li class="nav-item">
+                <a class="nav-link" href="Admin.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span> Admin Dashboard</span></a>
+            </li>
+
+            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="viewBook.php">
+                <a class="nav-link" href="registerLibrarian.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Books</span></a>
+                    <span>Register Librarian</span></a>
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="viewVideos.php">
+                <a class="nav-link" href="exportBookBorrowing.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Videos</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideo.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Video</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteBook.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>View Favorite Books</span></a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="AddRequest.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Add Request</span></a>
-            </li>
-
-
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" href="updateProfile.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Edite Profile</span></a>
-            </li>
-          
+                    <span>Export CSV</span></a>
+                </li>
+                 </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -315,7 +299,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">View Books</h1>
+                    <h1 class="h3 mb-2 text-gray-800">View Today</h1>
            
                               <form method="post" action="php/exportbookbr.php" align="center">  
                      <input type="submit" name="export" value="CSV Export" class="btn btn-success" />  

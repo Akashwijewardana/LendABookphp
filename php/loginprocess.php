@@ -2,12 +2,16 @@
 <?php 
 session_start();
 
-$db = mysqli_connect('localhost', 'root', '', 'lendabook');
+
+
+require_once('../php/dbcon.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+
+
 
 $result = $db->query($sql);
 if($result->num_rows>0){
@@ -16,7 +20,29 @@ if($result->num_rows>0){
 
 		$_SESSION["userid"] = $row['id'];
 		$_SESSION["package"] = $row['package'];
-    	header('location: ../viewBooks.php');
+
+		$role =$row['role'];
+
+
+if ($role=="admin") {
+
+header('location: ../Admin.php');
+	
+}elseif ($role=="librarian") {
+
+header('location: ../Librarian.php');
+	
+}else{
+
+header('location: ../User.php');
+
+}
+
+
+
+
+
+    	
 	}
 
 }

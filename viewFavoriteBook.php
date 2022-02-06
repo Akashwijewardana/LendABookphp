@@ -33,7 +33,7 @@
 $uid = $_SESSION['userid'];
 
  $db = mysqli_connect('localhost', 'root', '', 'lendabook');
- $results = mysqli_query($db, "SELECT book.id, book.name
+ $results = mysqli_query($db, "SELECT bookfavorites.id,book.id AS 'bkid', book.name
 FROM bookfavorites
 INNER JOIN book ON bookfavorites.book_id=book.id WHERE user_id ='$uid'"); ?>
 
@@ -55,8 +55,15 @@ INNER JOIN book ON bookfavorites.book_id=book.id WHERE user_id ='$uid'"); ?>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+           
+              <li class="nav-item">
+                <a class="nav-link" href="User.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
             <!-- Nav Item - Dashboard -->
-           li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="viewBook.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Books</span></a>
@@ -67,7 +74,7 @@ INNER JOIN book ON bookfavorites.book_id=book.id WHERE user_id ='$uid'"); ?>
                     <span>View Videos</span></a>
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideo.php">
+                <a class="nav-link" href="viewFavoriteVideos.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Favorite Video</span></a>
             </li>
@@ -89,7 +96,6 @@ INNER JOIN book ON bookfavorites.book_id=book.id WHERE user_id ='$uid'"); ?>
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Edite Profile</span></a>
             </li>
-          
           
 
             <!-- Sidebar Toggler (Sidebar) -->
@@ -339,9 +345,9 @@ INNER JOIN book ON bookfavorites.book_id=book.id WHERE user_id ='$uid'"); ?>
                                     <tbody>
                                        <?php while ($row = mysqli_fetch_array($results)) { ?>
             <tr>
-            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['bkid']; ?></td>
             <td><?php echo $row['name']; ?></td>
-            <td><?php echo $row['name']; ?></td>
+            <td><a href="php/deletebkfavorites.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash-alt"></i></a></td>
      
             </tr>
         <?php } ?>

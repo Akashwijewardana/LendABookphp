@@ -52,7 +52,7 @@ $id=$_GET['id'];
   <div class="input-group">
   <span class="input-group-addon"><i class="bi bi-book"></i></span>
  
- <input type="datetime" name="returndate"> </input>
+ <input type="datetime-local" name="returndate"> </input>
     </div>
   </div>
 </div>

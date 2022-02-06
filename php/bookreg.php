@@ -17,7 +17,7 @@
 
     mysqli_query($db, "INSERT INTO `book` (`name`, `desc`, `isbn`, `copies`, `author`) VALUES ( '$name', '$desc', '$isbn', '$copies', '$author')"); 
     $_SESSION['message'] = "BookSaved saved"; 
-    header('location: index.php');
+    header('location: ../Librarian.php');
 
 }
     else {

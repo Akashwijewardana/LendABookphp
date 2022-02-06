@@ -60,7 +60,14 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
+            
             <li class="nav-item">
+                <a class="nav-link" href="LibViewBokBorrowings.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Borrowings</span></a>
+            </li>
+
+           <li class="nav-item">
                 <a class="nav-link" href="AddBookBorrowing.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Borrow Books</span></a>
@@ -70,25 +77,42 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Add Books</span></a>
             </li>
+
+            </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewBookReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Book Reservations</span></a>
+            
+</li>
+
                <li class="nav-item">
                 <a class="nav-link" href="viewBkComments.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Book Comments</span></a>
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteBook.php">
+                <a class="nav-link" href="AddVideoBorrowing.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Borrow Videos</span></a>
             </li>
+            </li> 
+
                <li class="nav-item">
-                <a class="nav-link" href="AddRequest.php">
+                <a class="nav-link" href="AddVideo.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Add Videos</span></a>
             </li>
 
-</li>
+
+                   <li class="nav-item">
+                <a class="nav-link" href="LibViewVidBorrowings.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Borrowings</span></a>
+            </li>
+
                <li class="nav-item">
-                <a class="nav-link" href="viewFavoriteVideo.php">
+                <a class="nav-link" href="LibViewComments.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Video Comments</span></a>
             </li>
@@ -101,11 +125,18 @@
             </li>
 
 
+ </li>
+               <li class="nav-item">
+                <a class="nav-link" href="ViewVideoReservationforLiberian.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Video Reservations</span></a>
+            </li> 
+
 
 
             </li>
                <li class="nav-item">
-                <a class="nav-link" href="updateProfile.php">
+                <a class="nav-link" href="ViewUsers.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>View Members</span></a>
             </li>
@@ -117,7 +148,6 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Edite Profile</span></a>
             </li>
-          
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -355,6 +385,7 @@
                                           <th>Id</th>
                                           <th>User</th>
                                           <th>Comment</th>
+                                          <th>Delete</th>
                                          
                                         </tr>
                                     </thead>
@@ -365,6 +396,8 @@
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['user_id']; ?></td>
             <td><?php echo $row['comment']; ?></td>
+            <td><a href="php/deletebkcomment.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash-alt"></i></a></td>
+
      
             </tr>
         <?php } ?>
